@@ -26,7 +26,7 @@ pipeline {
                   sh 'printenv'
                   sh 'git version'
                   //sh 'docker build -t good777lord/node-app:""$Build_ID"".'
-                  sh 'docker build -t good777lord/node-app3.0 .'
+                  sh 'docker build -t good777lord/node-app4.0 .'
                 }
             }
         }
@@ -41,7 +41,7 @@ pipeline {
             }
             //normally
             //sh 'docker push good777lord/node-app:""$Build_ID""'
-            sh 'docker push good777lord/node-app3.0:latest'
+            sh 'docker push good777lord/node-app4.0:latest'
         }
             }   
         }
