@@ -7,7 +7,7 @@ pipeline {
     stage("GitHub git cloning") {
             steps {
                 script {
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/clement2019/Deploy-NodeAp-AWS-EKS-jenkins.git']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'nameID', url: 'https://github.com/lyday25/deploy-aws-node.git']])
                     //git branch: 'main', url: 'https://github.com/lyday25/deploy-aws-node.git' 
                 }
             }
@@ -36,8 +36,8 @@ pipeline {
             steps {
                 script {
                   
-                 withCredentials([string(credentialsId: 'dockerhub_ID', variable: 'dockerhub_ID')]) {
-                    sh 'docker login -u lyday25 -p ${dockerhub_ID}'
+                 withCredentials([string(credentialsId: 'DockerID', variable: 'DockerID')]) {
+                    sh 'docker login -u lyday25 -p ${DockerID}'
             }
             //normally
             //sh 'docker push lyday25/node-app:""$Build_ID""'
