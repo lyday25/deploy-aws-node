@@ -6,6 +6,10 @@ node .
 ## check if the app is working locally on the browser
 localhost:3000
 
+## authentication to aws
+aws configure
+aws sts get-caller-identity
+
 
 
 ## INSTALLATION OF KUBERNETES AWS EKS 
