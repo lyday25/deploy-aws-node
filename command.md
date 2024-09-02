@@ -76,6 +76,12 @@ kubectl describe pod nginx-deployment-77d8468669-dd9d4
 
 kubectl get svcsx
 
+kubectl delete svc nodejs-app1
+
+kubectl delete -f deployment.yaml
+
+kubectl get pods
+
 7. ## Delete EKS cluster
 eksctl delete cluster --name eks-cluster-201 --region eu-north-1
 ##or 
